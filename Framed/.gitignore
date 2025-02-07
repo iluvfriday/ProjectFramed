@@ -1,0 +1,44 @@
+# Ignore the Unity generated folders
+[Tt]emp/
+[Ll]ibrary/
+obj/
+[Bb]uild/
+[Bb]uilds/
+
+# User-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.tmproj
+*.swp
+
+# Unity-generated files
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider settings
+.idea/
+
+# Unity Asset Store packages
+AssetStoreTools*
+
+# Crashlytics settings (if using)
+crashlytics-build
+
+# Auto-generated VS code settings (if applicable)
+.vscode/
+
+# Build settings
+Build/

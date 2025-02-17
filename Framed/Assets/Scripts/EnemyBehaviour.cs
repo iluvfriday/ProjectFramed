@@ -4,19 +4,19 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public Transform[] patrolPoints; // Waypoints for patrolling
-    public Transform player; // Reference to the player
-    public float sightRange = 10f; // Enemy vision range
+    public Transform[] patrolPoints;
+    public Transform player;
+    public float sightRange = 10f;
     public float chaseSpeed = 4f;
     public float patrolSpeed = 2f;
-    public float waitTime = 5f; // Time to wait at each patrol point
+    public float waitTime = 5f;
 
     private int currentPatrolIndex;
     private NavMeshAgent agent;
     private bool chasingPlayer = false;
     private bool waiting = false;
 
-    void Start()
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = patrolSpeed;
@@ -24,11 +24,11 @@ public class EnemyBehaviour : MonoBehaviour
         MoveToNextPatrolPoint();
     }
 
-    void Update()
+    private void Update()
     {
         if (CanSeePlayer())
         {
-            StopAllCoroutines(); // Stop patrol waiting if enemy sees player
+            StopAllCoroutines();
             ChasePlayer();
         }
         else
@@ -42,20 +42,20 @@ public class EnemyBehaviour : MonoBehaviour
 
             if (!waiting && !agent.pathPending && agent.remainingDistance < 0.5f)
             {
-                StartCoroutine(WaitAtPatrolPoint()); // Wait before moving to next point
+                StartCoroutine(WaitAtPatrolPoint());
             }
         }
     }
 
-    IEnumerator WaitAtPatrolPoint()
+    private IEnumerator WaitAtPatrolPoint()
     {
         waiting = true;
-        yield return new WaitForSeconds(waitTime); // Wait for 5 seconds
+        yield return new WaitForSeconds(waitTime);
         MoveToNextPatrolPoint();
         waiting = false;
     }
 
-    void MoveToNextPatrolPoint()
+    private void MoveToNextPatrolPoint()
     {
         if (patrolPoints.Length == 0)
             return;
@@ -63,12 +63,12 @@ public class EnemyBehaviour : MonoBehaviour
         currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
     }
 
-    bool CanSeePlayer()
+    private bool CanSeePlayer()
     {
         if (Vector3.Distance(transform.position, player.position) < sightRange)
         {
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
-            if (Vector3.Dot(transform.forward, directionToPlayer) > 0.5f) // Only detect in front
+            if (Vector3.Dot(transform.forward, directionToPlayer) > 0.5f)
             {
                 RaycastHit hit;
                 if (
@@ -88,7 +88,7 @@ public class EnemyBehaviour : MonoBehaviour
         return false;
     }
 
-    void ChasePlayer()
+    private void ChasePlayer()
     {
         agent.speed = chaseSpeed;
         agent.destination = player.position;

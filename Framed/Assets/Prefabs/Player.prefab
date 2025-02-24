@@ -53,7 +53,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.72
+  m_Height: 3.8
   m_Radius: 0.35
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -77,7 +77,7 @@ MonoBehaviour:
   crouchSpeed: 1.5
   gravity: -9.81
   playerCamera: {fileID: 4775177295510283222}
-  mouseSensitivity: 200
+  mouseSensitivity: 50
   lockCursor: 1
 --- !u!1 &8997939766906671216
 GameObject:
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 8997939766906671216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.632, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0.033052444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,15 +226,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.873
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61fd9fb5667e14042ad1ccd5276bcf24, type: 3}
       propertyPath: m_LocalPosition.z

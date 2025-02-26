@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Project\\ProjectFramed\\Framed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2907DAB-6E16-CCA9-8FE1-DCCDA728F791}|Unity.RenderPipelines.Universal.Runtime.csproj|d:\\project\\projectframed\\framed\\library\\packagecache\\com.unity.render-pipelines.universal\\runtime\\passes\\additionallightsshadowcasterpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2907DAB-6E16-CCA9-8FE1-DCCDA728F791}|Unity.RenderPipelines.Universal.Runtime.csproj|solutionrelative:library\\packagecache\\com.unity.render-pipelines.universal\\runtime\\passes\\additionallightsshadowcasterpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C4B35C0-4A33-3B81-DBA3-33B9D2B5F6C5}|Unity.RenderPipelines.Universal.Shaders.csproj|D:\\Project\\ProjectFramed\\Framed\\library\\packagecache\\com.unity.render-pipelines.universal\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{2C4B35C0-4A33-3B81-DBA3-33B9D2B5F6C5}|Unity.RenderPipelines.Universal.Shaders.csproj|solutionrelative:library\\packagecache\\com.unity.render-pipelines.universal\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2907DAB-6E16-CCA9-8FE1-DCCDA728F791}|Unity.RenderPipelines.Universal.Runtime.csproj|d:\\project\\projectframed\\framed\\library\\packagecache\\com.unity.render-pipelines.universal\\runtime\\passes\\additionallightsshadowcasterpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2907DAB-6E16-CCA9-8FE1-DCCDA728F791}|Unity.RenderPipelines.Universal.Runtime.csproj|solutionrelative:library\\packagecache\\com.unity.render-pipelines.universal\\runtime\\passes\\additionallightsshadowcasterpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|D:\\Project\\ProjectFramed\\Framed\\assets\\brick project studio\\apartment kit\\common\\scripts \u0026 animation\\closet\\closetopenclosedoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdditionalLightsShadowCasterPass.cs",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
@@ -123,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Lit.shader",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
@@ -131,7 +131,8 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-02-22T21:15:43.898Z"
+              "WhenOpened": "2025-02-22T21:15:43.898Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

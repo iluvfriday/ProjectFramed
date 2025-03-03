@@ -20,10 +20,12 @@ public class PlayerMovement : MonoBehaviour
     private float crouchHeight = 1f;
 
     private float xRotation = 0f;
+    private Animator animator;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
         originalHeight = controller.height;
 
         if (lockCursor)
@@ -45,16 +47,33 @@ public class PlayerMovement : MonoBehaviour
         float speed = walkSpeed;
 
         if (Input.GetKey(KeyCode.LeftShift))
+        {
             speed = sprintSpeed;
-
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
+        }
         if (controller.height < originalHeight)
+        {
             speed = crouchSpeed;
+            animator.SetBool("Crouch", true);
+        }
+        else
+        {
+            animator.SetBool("Crouch", false);
+        }
 
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = transform.right * moveX + transform.forward * moveZ;
         controller.Move(moveDirection * speed * Time.deltaTime);
+        if (Mathf.Abs(moveDirection.magnitude) > 0)
+            animator.SetBool("IsWalking", true);
+        else
+            animator.SetBool("IsWalking", false);
 
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0)

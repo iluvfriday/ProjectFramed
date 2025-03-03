@@ -77,7 +77,7 @@ MonoBehaviour:
   crouchSpeed: 1.5
   gravity: -9.81
   playerCamera: {fileID: 4775177295510283222}
-  mouseSensitivity: 50
+  mouseSensitivity: 30
   lockCursor: 1
 --- !u!1 &8997939766906671216
 GameObject:

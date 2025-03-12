@@ -2,16 +2,14 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement Settings")]
     public float walkSpeed = 3f;
     public float sprintSpeed = 6f;
     public float crouchSpeed = 1.5f;
     public float gravity = -9.81f;
 
-    [Header("Mouse Look")]
     public Transform playerCamera;
     public float mouseSensitivity = 200f;
-    public bool lockCursor = true;
+    public Texture2D cursor;
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -22,17 +20,30 @@ public class PlayerMovement : MonoBehaviour
     private float xRotation = 0f;
     private Animator animator;
 
+    private void Awake()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         originalHeight = controller.height;
+    }
 
-        if (lockCursor)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+    private void OnMouseEnter()
+    {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        Debug.Log("Cursor Visible");
+        Cursor.visible = true;
+    }
+
+    private void OnMouseExit()
+    {
+        Debug.Log("Cursor not visible");
+        Cursor.visible = false;
     }
 
     void Update()

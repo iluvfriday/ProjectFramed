@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2525044757558983352}
   - component: {fileID: 8912501664988473279}
-  - component: {fileID: 5538968218460224294}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -60,25 +59,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5538968218460224294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5994293212821840818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17d2583d34f13b42a573b3430dfe9de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 3
-  sprintSpeed: 6
-  crouchSpeed: 1.5
-  gravity: -9.81
-  playerCamera: {fileID: 4775177295510283222}
-  mouseSensitivity: 30
-  lockCursor: 1
 --- !u!1 &8997939766906671216
 GameObject:
   m_ObjectHideFlags: 0

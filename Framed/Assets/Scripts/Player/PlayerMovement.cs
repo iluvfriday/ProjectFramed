@@ -21,9 +21,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        DisableCursor();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         originalHeight = controller.height;
+    }
+
+    private static void DisableCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()

@@ -263,6 +263,7 @@ MonoBehaviour:
   closeAngle: 0
   springForce: 100
   damper: 50
+  outlineMaterial: {fileID: 2100000, guid: caac2e84c6e1541478b3988a71303091, type: 2}
 --- !u!4 &1043308546787811557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d6e6e53ebf4fcc44bb7b810c9c8b2b30, type: 3}

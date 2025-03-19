@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Project\\ProjectFramed\\Framed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|d:\\project\\projectframed\\framed\\assets\\scripts\\player\\opendoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\opendoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|d:\\project\\projectframed\\framed\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|D:\\Project\\ProjectFramed\\Framed\\assets\\scripts\\enemybehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemybehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|D:\\Project\\ProjectFramed\\Framed\\assets\\scripts\\player\\opendoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\opendoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|D:\\Project\\ProjectFramed\\Framed\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|D:\\Project\\ProjectFramed\\Framed\\assets\\scripts\\enemybehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDF12A7-9D64-5EA1-B409-F4CCC7579D88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemybehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,46 +102,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Door.cs",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
               "ToolTip": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Door.cs",
               "RelativeToolTip": "Assets\\Scripts\\Door.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T10:18:17.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OpenDoor.cs",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Player\\OpenDoor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\OpenDoor.cs",
               "ToolTip": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Player\\OpenDoor.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\OpenDoor.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T08:43:11.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T13:55:03.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T13:55:03.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EnemyBehaviour.cs",
               "DocumentMoniker": "D:\\Project\\ProjectFramed\\Framed\\Assets\\Scripts\\EnemyBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyBehaviour.cs",
@@ -149,8 +148,7 @@
               "RelativeToolTip": "Assets\\Scripts\\EnemyBehaviour.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T11:02:01.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T11:02:01.504Z"
             }
           ]
         },

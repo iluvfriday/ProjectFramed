@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 6f;
     public float crouchSpeed = 1.5f;
     public float gravity = -9.81f;
+    public float crouchHeight = 1f;
 
     public Transform playerCamera;
     public float mouseSensitivity = 200f;
@@ -14,17 +15,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private float originalHeight;
-    private float crouchHeight = 1f;
-
     private float xRotation = 0f;
-    private Animator animator;
+    private Vector3 originalCenter;
+    private float originalCameraY;
 
     void Start()
     {
         DisableCursor();
         controller = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
         originalHeight = controller.height;
+        originalCenter = controller.center;
+        originalCameraY = playerCamera.localPosition.y; // Lưu vị trí gốc của camera
     }
 
     private static void DisableCursor()
@@ -47,31 +48,17 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = sprintSpeed;
-            animator.SetBool("IsRunning", true);
-        }
-        else
-        {
-            animator.SetBool("IsRunning", false);
         }
         if (controller.height < originalHeight)
         {
             speed = crouchSpeed;
-            animator.SetBool("Crouch", true);
         }
-        else
-        {
-            animator.SetBool("Crouch", false);
-        }
-
+        Debug.Log(speed);
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = transform.right * moveX + transform.forward * moveZ;
         controller.Move(moveDirection * speed * Time.deltaTime);
-        if (Mathf.Abs(moveDirection.magnitude) > 0)
-            animator.SetBool("IsWalking", true);
-        else
-            animator.SetBool("IsWalking", false);
 
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0)
@@ -95,10 +82,24 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleCrouch()
     {
-        float targetHeight = Input.GetKey(KeyCode.LeftControl) ? crouchHeight : originalHeight;
+        bool isCrouching = Input.GetKey(KeyCode.LeftControl);
+
+        // Điều chỉnh collider height
+        float targetHeight = isCrouching ? crouchHeight : originalHeight;
         controller.height = Mathf.Lerp(controller.height, targetHeight, Time.deltaTime * 10f);
 
-        if (Mathf.Abs(controller.height - originalHeight) < 0.01f)
-            controller.height = originalHeight;
+        // Điều chỉnh vị trí center để đảm bảo collider vẫn chạm đất
+        float centerY = originalCenter.y - (originalHeight - controller.height) / 2;
+        controller.center = new Vector3(originalCenter.x, centerY, originalCenter.z);
+
+        // Điều chỉnh camera theo công thức originalHeight - crouchHeight
+        float targetCameraY = isCrouching
+            ? (originalCameraY - (originalHeight - crouchHeight))
+            : originalCameraY;
+        playerCamera.localPosition = new Vector3(
+            playerCamera.localPosition.x,
+            Mathf.Lerp(playerCamera.localPosition.y, targetCameraY, Time.deltaTime * 10f),
+            playerCamera.localPosition.z
+        );
     }
 }

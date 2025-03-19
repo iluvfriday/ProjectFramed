@@ -11,27 +11,48 @@ public class OpenDoor : MonoBehaviour
     [SerializeField]
     private float interactionDistance = 3f;
 
+    private Door lastHighlightedDoor;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RaycastHit hit;
-            if (
-                Physics.Raycast(
-                    cam.transform.position,
-                    cam.transform.forward,
-                    out hit,
-                    interactionDistance,
-                    doorLayer
-                )
+        RaycastHit hit;
+        if (
+            Physics.Raycast(
+                cam.transform.position,
+                cam.transform.forward,
+                out hit,
+                interactionDistance,
+                doorLayer
             )
+        )
+        {
+            Door door = hit.collider.GetComponent<Door>();
+
+            if (door != null)
             {
-                Door door = hit.collider.GetComponent<Door>();
-                if (door != null)
+                if (lastHighlightedDoor != door)
                 {
-                    Debug.Log("Door toggle");
+                    if (lastHighlightedDoor != null)
+                    {
+                        lastHighlightedDoor.SetOutline(false);
+                    }
+
+                    door.SetOutline(true);
+                    lastHighlightedDoor = door;
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
                     door.ToggleDoor();
                 }
+            }
+        }
+        else
+        {
+            if (lastHighlightedDoor != null)
+            {
+                lastHighlightedDoor.SetOutline(false);
+                lastHighlightedDoor = null;
             }
         }
     }

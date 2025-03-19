@@ -17,9 +17,22 @@ public class Door : MonoBehaviour
     [SerializeField]
     private float damper = 50f;
 
+    private Renderer rend;
+    private Material[] originalMaterials;
+    private bool isOutlined = false;
+
+    [SerializeField]
+    private Material outlineMaterial;
+
     void Start()
     {
         joint = GetComponent<HingeJoint>();
+        rend = GetComponent<Renderer>();
+
+        if (rend != null)
+        {
+            originalMaterials = rend.materials;
+        }
     }
 
     public void ToggleDoor()
@@ -27,15 +40,40 @@ public class Door : MonoBehaviour
         if (joint == null)
             return;
 
-        JointSpring spring = new JointSpring();
-        spring.spring = springForce;
-        spring.damper = damper;
-
-        spring.targetPosition = isOpen ? closeAngle : openAngle;
+        JointSpring spring = new JointSpring
+        {
+            spring = springForce,
+            damper = damper,
+            targetPosition = isOpen ? closeAngle : openAngle,
+        };
 
         joint.spring = spring;
         joint.useSpring = true;
 
         isOpen = !isOpen;
+    }
+
+    public void SetOutline(bool enable)
+    {
+        if (rend == null || outlineMaterial == null || isOutlined == enable)
+            return;
+
+        if (enable)
+        {
+            Material[] newMaterials = new Material[originalMaterials.Length + 1];
+            for (int i = 0; i < originalMaterials.Length; i++)
+            {
+                newMaterials[i] = originalMaterials[i];
+            }
+            newMaterials[newMaterials.Length - 1] = outlineMaterial;
+
+            rend.materials = newMaterials;
+        }
+        else
+        {
+            rend.materials = originalMaterials;
+        }
+
+        isOutlined = enable;
     }
 }

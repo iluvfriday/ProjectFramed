@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = crouchSpeed;
         }
-        Debug.Log(speed);
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 

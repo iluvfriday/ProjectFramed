@@ -55,6 +55,17 @@ public class InteractObject : MonoBehaviour
                 lastHighlightedObject.SetOutline(false);
                 lastHighlightedObject = null;
             }
+            if (
+                Physics.Raycast(
+                    cam.transform.position,
+                    cam.transform.forward,
+                    out hit,
+                    interactionDistance
+                )
+            )
+            {
+                Debug.Log(hit.collider.name);
+            }
         }
     }
 }
